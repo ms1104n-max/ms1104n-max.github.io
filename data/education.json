@@ -1,0 +1,54 @@
+{
+  "_instructions": "Add your education and certifications here.",
+  "sectionTitle": "Education & Certifications",
+  "certificationsTitle": "Certifications",
+  "education": [
+    {
+      "degree": "Master of Science in Computer Science",
+      "school": "Lamar University, Beaumont, TX, USA",
+      "institution": "Lamar University, Beaumont, TX, USA",
+      "period": "Jul 2023 – May 2025",
+      "details": "",
+      "description": ""
+    },
+    {
+      "degree": "Bachelor of Technology in Electronics and Communication Engineering",
+      "school": "Jawaharlal Nehru Technological University, Hyderabad, India",
+      "institution": "Jawaharlal Nehru Technological University, Hyderabad, India",
+      "period": "May 2018 – Jul 2022",
+      "details": "",
+      "description": ""
+    }
+  ],
+  "certifications": [
+    {
+      "title": "AWS Certified Machine Learning Engineer – Associate",
+      "name": "AWS Certified Machine Learning Engineer – Associate",
+      "issuer": "AWS",
+      "date": "",
+      "icon": "fas fa-certificate",
+      "color": "#FF9900",
+      "url": "https://www.credly.com/badges/a3e7833c-d070-4b5e-8f91-6f21f3c9a795/public_url"
+    }
+  ],
+  "awardsTitle": "Awards",
+  "awards": [
+    {
+      "title": "Outstanding Graduate Student Award",
+      "issuer": "Lamar University",
+      "date": "April 2025",
+      "icon": "fas fa-trophy",
+      "color": "#FFE66D",
+      "pdfUrl": "assets/certificates/Outstanding Graduate Student Award.pdf"
+    },
+    {
+      "title": "Outstanding Individual Contribution Award",
+      "issuer": "Accenture",
+      "date": "August 2022",
+      "description": "Recognized for Respect for the Individual",
+      "icon": "fas fa-award",
+      "color": "#4ECDC4",
+      "pdfUrl": "assets/certificates/Outstanding Individual Contribution Award.pdf"
+    }
+  ]
+}

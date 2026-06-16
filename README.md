@@ -1,7 +1,7 @@
 # Sai Nikhil Mattapalli — Portfolio
 
 Personal portfolio site for Sai Nikhil Mattapalli — AI/ML Engineer.
-Healthcare ML, RAG systems, and Generative AI in production.
+Financial ML, RAG systems, and Generative AI in production.
 
 ## Stack
 
@@ -23,7 +23,7 @@ python3 -m http.server 8000
 │   ├── js/main.js             Live console + UI behavior
 │   ├── files/Resume.pdf       Résumé download
 │   ├── images/sai-nikhil.jpg  Portrait used in About section
-│   └── certificates/          Award PDFs (legacy, optional)
+│   └── certificates/          Certificate PDFs + thumbnails (Google ML Engineer, Microsoft MLOps)
 ├── data/                      JSON files (unused — legacy)
 ├── index.html                 Single-page portfolio
 └── package.json

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Nithish Marneni — Portfolio
+   Sai Nikhil Mattapalli — Portfolio
    Direction: "Trading Terminal meets Editorial"
    ==========================================================================*/
 
@@ -1069,7 +1069,7 @@ main { position: relative; z-index: 1; }
    ==========================================================================*/
 .creds {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: clamp(32px, 4vw, 64px);
 }
 .creds__block {}
@@ -1144,6 +1144,93 @@ main { position: relative; z-index: 1; }
     font-size: 14px;
     line-height: 1.4;
 }
+
+/* Certifications & awards showcase (thumbnail gallery) */
+.certshow {
+    margin-top: clamp(40px, 5vw, 72px);
+}
+.certshow__label {
+    font-family: var(--f-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    margin: 0 0 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    font-weight: 500;
+}
+.certgrid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 360px));
+    justify-content: start;
+    gap: clamp(16px, 2vw, 32px);
+}
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(237, 234, 226, 0.02);
+    transition: border-color .3s var(--ease), transform .3s var(--ease), background .3s var(--ease);
+}
+.cert-card:hover {
+    border-color: rgba(212, 255, 58, 0.4);
+    transform: translateY(-4px);
+    background: rgba(237, 234, 226, 0.045);
+}
+.cert-card__thumb {
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 7px;
+    background: #fff;
+    border: 1px solid var(--border);
+}
+.cert-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform .45s var(--ease);
+}
+.cert-card:hover .cert-card__thumb img { transform: scale(1.04); }
+.cert-card__cap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 2px;
+}
+.cert-card__issuer {
+    font-family: var(--f-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+}
+.cert-card__name {
+    color: var(--fg);
+    font-size: 13.5px;
+    line-height: 1.35;
+}
+.cert-card__cta {
+    margin-top: auto;
+    padding: 0 2px;
+    font-family: var(--f-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--fg-muted);
+    transition: color .25s var(--ease);
+}
+.cert-card:hover .cert-card__cta { color: var(--accent); }
 
 /* Awards */
 .award { padding: 16px 0; border-bottom: 1px dashed var(--border); }
@@ -1550,7 +1637,8 @@ main { position: relative; z-index: 1; }
 
     .stack { grid-template-columns: repeat(2, 1fr); }
     .repos__grid { grid-template-columns: repeat(2, 1fr); }
-    .creds { grid-template-columns: 1fr; }
+    .creds { grid-template-columns: repeat(2, 1fr); }
+    .certgrid { grid-template-columns: repeat(2, 1fr); }
     .contact { grid-template-columns: repeat(2, 1fr); }
     .footer__inner { grid-template-columns: 1fr 1fr; }
 }
@@ -1590,6 +1678,7 @@ main { position: relative; z-index: 1; }
 
     .stack { grid-template-columns: 1fr; }
     .repos__grid { grid-template-columns: 1fr; }
+    .creds { grid-template-columns: 1fr; }
     .contact { grid-template-columns: 1fr; }
     .contact__card { border-right: 0; }
 

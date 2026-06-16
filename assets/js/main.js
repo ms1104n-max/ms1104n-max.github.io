@@ -43,7 +43,7 @@
         });
     }
 
-    // ---- Console: animated RAG care-insights inference log
+    // ---- Console: animated RAG financial-research inference log
     const log = document.getElementById('log');
     const tpsEl = document.getElementById('tps');
 
@@ -58,13 +58,13 @@
         };
         const hex = (n) => Math.floor(Math.random() * 16 ** n)
             .toString(16).padStart(n, '0');
-        const memberId = () => `mbr_${hex(4)}_${hex(3)}`;
+        const docId = () => `doc_${hex(4)}_${hex(3)}`;
 
-        // Outcome distribution: most queries answer cleanly, some refer to a clinician, few escalate.
+        // Outcome distribution: most queries answer cleanly, some get flagged for review, few escalate on risk.
         const nextOutcome = () => {
             const r = Math.random();
             if (r < 0.78) return ['ANSWER', 'allow'];
-            if (r < 0.95) return ['REFER', 'score'];
+            if (r < 0.95) return ['FLAG', 'score'];
             return ['ESCALATE', 'block'];
         };
 
@@ -73,7 +73,7 @@
             // Retrieval depth k=5 with one or two below threshold occasionally
             const hits = Math.random() < 0.92 ? 5 : 4;
             const lat = 280 + Math.floor(Math.random() * 180); // ms
-            const line = `<span class="ts">[${now()}]</span> <span class="id">${memberId()}</span>  retrieve k=<span class="score">${hits}</span>  gen=<span class="score">${lat}ms</span>  <span class="${cls}">${v}</span>`;
+            const line = `<span class="ts">[${now()}]</span> <span class="id">${docId()}</span>  retrieve k=<span class="score">${hits}</span>  gen=<span class="score">${lat}ms</span>  <span class="${cls}">${v}</span>`;
             lines.push(line);
             if (lines.length > MAX_LINES) lines.shift();
             const caret = '<span class="caret"></span>';
@@ -101,7 +101,7 @@
 
     // ---- Reveal on scroll
     const revealTargets = document.querySelectorAll(
-        '.section__head, .role, .project, .stack__col, .creds__block, .contact__card, .impact__cell, .repo'
+        '.section__head, .role, .project, .stack__col, .creds__block, .contact__card, .impact__cell, .repo, .cert-card'
     );
     revealTargets.forEach(el => el.classList.add('reveal'));
 
